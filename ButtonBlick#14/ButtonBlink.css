@@ -1,0 +1,46 @@
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #536DFE;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    filter: blur(3px);
+    width: 1.5em;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: translateX(-4em) skewX(-45deg);
+    animation: move-light 2s infinite;
+}
+
+@keyframes move-light{
+    from{
+        transform: translateX(-4em) skewX(-45deg)
+    }
+    to{
+        transform: translateX(10em) skewX(-45deg)
+    }
+    to{
+        transform: translateX(10em) skewX(-45deg)
+    }
+}

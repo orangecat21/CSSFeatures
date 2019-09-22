@@ -1,0 +1,46 @@
+body{
+	font-family: sans-serif;
+	margin: 0;
+}
+.wrap{
+	width: 100vw;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	background-color: #88DEF8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.card{
+	width: 300px;
+	height: 300px;
+	position: relative;
+	perspective: 1000px;
+}
+.front, .back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: .5s;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backface-visibility: hidden;
+	border-radius: 10%;
+}
+.front{
+	background-color: #fff;
+}
+.back{
+	background-color: #8D8D8D;
+	transform: rotateY(180deg);
+}
+.card:hover .front{
+	transform: rotateY(180deg);
+}
+.card:hover .back{
+	transform: rotateY(360deg);
+}

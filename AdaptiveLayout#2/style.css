@@ -1,0 +1,57 @@
+body{
+	margin: 0;
+	font-family: sans-serif;
+}
+.section {
+	background-color: #f2395a;
+	color: #fff;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	perspective: 1000px;
+}
+.heading{
+	margin-left: 20%;
+}
+.phone,
+.tablet,
+.desctop{
+	background-color: #fff;
+	position: absolute;
+	transition: 1s;
+	transform: translateY(100%);
+	box-shadow: 13px 13px 15px 0 rgba(242, 57, 90, .3);
+}
+.section:hover .phone,
+.section:hover .tablet,
+.section:hover .desctop {
+	transform: translateY(10px) rotateY(-15deg) rotateZ(4deg);
+}
+.phone{
+	width: 200px;
+	height: 280px;
+	left: 5%;
+	bottom: 0;
+	z-index: 3;
+	background-color: green;
+	transition-delay: .1s;
+}
+.tablet{
+	width: 360px;
+	height: 380px;
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	z-index: 1;
+	background-color: blue;
+	transition-delay: .2s;
+}
+.desctop{
+	width: 680px;
+	height: 480px;
+	bottom: 0;
+	left: 15%;
+	transition-delay: .3s;
+}
