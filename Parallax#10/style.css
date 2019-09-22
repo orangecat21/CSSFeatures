@@ -1,0 +1,39 @@
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	perspective: 1px;
+	transform-style: preserve-3d;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	font-family: sans-serif;
+	color: #fff;
+}
+header {
+	box-sizing: border-box;
+	min-height: 100vh;
+	text-align: center;
+	padding-top: 20%;
+	transform-style: inherit;
+	width: 100vw;
+}
+header::before{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	transform-origin: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(main1-bg.jpg);
+	min-height: 100vh;
+	transform: translateZ(-1px) scale(2);
+}
